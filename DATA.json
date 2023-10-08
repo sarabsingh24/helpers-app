@@ -1,0 +1,114 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "arvind kumar",
+            "state": "kanpur",
+            "gender": "male",
+            "phone": "1111111111",
+            "position": {
+                "latitude": 99,
+                "longitude": 99
+            },
+            "rating": 5,
+            "thumImage": "ddfdfdfdfd",
+            "intrest": [
+                "medical",
+                "lost items",
+                "talk",
+                "accident"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "rakesh chadha",
+            "state": "delhi",
+            "gender": "male",
+            "phone": "2222222222",
+            "position": {
+                "latitude": 99,
+                "longitude": 99
+            },
+            "rating": 5,
+            "thumImage": "ddfdfdfdfd",
+            "intrest": [
+                "money",
+                "guidence",
+                "talk",
+                "accident"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "roshni mahajan",
+            "state": "delhi",
+            "gender": "female",
+            "phone": "3333333333",
+            "position": {
+                "latitude": 99,
+                "longitude": 99
+            },
+            "rating": 5,
+            "thumImage": "ddfdfdfdfd",
+            "intrest": [
+                "money",
+                "danger",
+                "accident",
+                "mechanical"
+            ]
+        }
+    ],
+    "catagory": [
+        {
+            "id": 1,
+            "type": "money",
+            "thumImage": "dollar-sign",
+            "page": "View"
+        },
+        {
+            "id": 2,
+            "type": "medical",
+            "thumImage": "activity",
+            "page": "View"
+        },
+        {
+            "id": 3,
+            "type": "lost Item",
+            "thumImage": "camera",
+            "page": "View"
+        },
+        {
+            "id": 4,
+            "type": "danger",
+            "thumImage": "award",
+            "page": "View"
+        },
+        {
+            "id": 5,
+            "type": "guidence",
+            "thumImage": "at-sign",
+            "page": "View"
+        },
+        {
+            "id": 6,
+            "type": "accident",
+            "thumImage": "anchor",
+            "page": "View"
+        },
+        {
+            "id": 7,
+            "type": "mechanical",
+            "thumImage": "airplay",
+            "page": "View"
+        },
+        {
+            "id": 8,
+            "type": "talk",
+            "thumImage": "airplay",
+            "page": "View"
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}
