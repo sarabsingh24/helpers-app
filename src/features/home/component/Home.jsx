@@ -3,6 +3,7 @@ import {
   View,
   Text,
   SafeAreaView,
+  FlatList,
   Image,
   TouchableOpacity,
 } from 'react-native';
@@ -15,6 +16,18 @@ import face from 'src/images/p11.jpeg';
 
 //reducer
 import { availabilityFun } from '../homeSlice';
+
+const accessList = [
+  {
+    text: 'Now you are available to help.',
+  },
+  {
+    text: 'Your current location is updated.',
+  },
+  {
+    text: 'People around you can ask for help.',
+  },
+];
 
 const Home = () => {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -36,18 +49,19 @@ const Home = () => {
   return (
     <View className=" flex h-full items-center justify-center   ">
       <View className="  items-center  relative ">
-        <TouchableOpacity onPress={toggleSwitch}>
-          <Image
-            source={face}
-            className={`h-52 w-24 flex-none rounded-full opacity-10  `}
-          />
-          <Image
-            source={face}
-            className={`h-24 w-24 flex-none rounded-full  absolute border-4 border-white  ${opacity} transition ease-in-out delay-500`}
-            style={{ bottom: !isEnabled ? 0 : 'auto' }}
-          />
-        </TouchableOpacity>
-
+        <View>
+          <TouchableOpacity onPress={toggleSwitch}>
+            <Image
+              source={face}
+              className={`h-52 w-24 flex-none rounded-full opacity-10  `}
+            />
+            <Image
+              source={face}
+              className={`h-24 w-24 flex-none rounded-full  absolute border-4 border-white  ${opacity} transition ease-in-out delay-500`}
+              style={{ bottom: !isEnabled ? 0 : 'auto' }}
+            />
+          </TouchableOpacity>
+        </View>
         <Text className="text-xl font-semibold text-gray-900">Leza Hadern</Text>
         <View className="flex flex-row items-center justify-center mt-1 mb-4  ">
           <Feather name="map-pin" size={18} style={styles.tabIcon} />
@@ -57,12 +71,25 @@ const Home = () => {
         </View>
         <View className="w-80 items-center  ">
           <Text className="text-gray-600 text-center mb-4">
-            Would you like to be volinteer to help sombody in need around your
-            current location.
+            Hi, how are you feeling today, are you in mood to be volinteer to
+            help someone in need? please switch “ON” your App.
           </Text>
-          {IsAvailable && (
+
+          <View
+            className={`items-center gap-2 mt-2 text-gray-300 ${
+              isEnabled ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
             <Feather name="check-circle" size={62} style={styles.active} />
-          )}
+
+            {accessList.map((item, ind) => {
+              return (
+                <Text key={ind} className="text-gray-600">
+                  - {item.text}
+                </Text>
+              );
+            })}
+          </View>
         </View>
       </View>
     </View>

@@ -46,6 +46,7 @@ const GoogleMapView = () => {
         region={mapRegion}
       >
         <Marker title="You are here" coordinate={mapRegion} />
+       
       </MapView>
     </View>
   );

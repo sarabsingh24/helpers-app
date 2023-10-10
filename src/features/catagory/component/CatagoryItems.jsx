@@ -7,7 +7,7 @@ import Feather from '@expo/vector-icons/Feather';
 const CatagoryItems = ({ type, thumImage }) => {
   return (
     <View
-      className="flex w-48 px-8 py-6  my-2  bg-white shadow-lg items-center justify-between rounded-xl"
+      className=" w-48 px-8 py-6  my-2  bg-white shadow-lg items-center justify-between rounded-xl"
       style={styles.container}
     >
       <Feather name={thumImage} size={24} />

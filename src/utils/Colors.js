@@ -14,6 +14,10 @@ const Orange = {
 const Green ={
 _900:'#1b5e20'
 }
-const colorCode = { BlueGray, Orange, Green };
+
+const Blue = {
+  _800: '#1565c0',
+};
+const colorCode = { BlueGray, Orange, Green, Blue };
 
 export default colorCode;

@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   btn: {
     position: 'absolute',
     zIndex: 3,
-    bottom: 42,
+    bottom: 32,
     left: 8,
   },
 });

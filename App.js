@@ -10,8 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // common
 import TabNavigator from 'src/common/components/TabNavigator';
-import SideMenu from 'src/common/components/SideMenu';
-import HomeScreen from 'src/screens/HomeScreen';
+
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -19,8 +18,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <SideMenu />
-        <SafeAreaProvider className="mb-20 ">
+        <SafeAreaProvider >
           <TabNavigator />
         </SafeAreaProvider>
       </NavigationContainer>
