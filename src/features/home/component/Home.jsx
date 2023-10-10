@@ -45,6 +45,7 @@ const Home = () => {
   }, [IsAvailable]);
 
   const opacity = !isEnabled ? 'opacity-30' : null;
+  const position = isEnabled ? 'top':'bottom' ;
 
   return (
     <View className=" flex h-full items-center justify-center   ">
@@ -58,7 +59,7 @@ const Home = () => {
             <Image
               source={face}
               className={`h-24 w-24 flex-none rounded-full  absolute border-4 border-white  ${opacity} transition ease-in-out delay-500`}
-              style={{ bottom: !isEnabled ? 0 : 'auto' }}
+              style={{ [position]: 0 }}
             />
           </TouchableOpacity>
         </View>

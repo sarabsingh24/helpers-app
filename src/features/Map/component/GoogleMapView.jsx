@@ -4,7 +4,10 @@ import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import { useSelector, useDispatch } from 'react-redux';
 import * as Location from 'expo-location';
 //reducer
-import { locationSliceFun } from '../MapSlice';
+import { locationSliceFun, getOnlineNearbyUsersAsync } from '../MapSlice';
+
+//icon
+import Feather from '@expo/vector-icons/Feather';
 
 const GoogleMapView = () => {
   const [errorMsg, setErrorMsg] = useState(null);
@@ -15,7 +18,9 @@ const GoogleMapView = () => {
     longitudeDelta: 0.0421,
   });
 
-  const { latitude, longitude } = useSelector((state) => state.location);
+  const { myLocation, newarByOnlineUsers } = useSelector(
+    (state) => state.location
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,12 +35,17 @@ const GoogleMapView = () => {
 
       const { latitude, longitude } = location.coords;
       dispatch(locationSliceFun({ latitude, longitude }));
+      dispatch(getOnlineNearbyUsersAsync());
     })();
   }, []);
 
   useEffect(() => {
-    setMapRegion({ ...mapRegion, latitude: latitude, longitude: longitude });
-  }, [latitude, longitude]);
+    setMapRegion({
+      ...mapRegion,
+      latitude: myLocation.latitude,
+      longitude: myLocation.longitude,
+    });
+  }, [myLocation.latitude, myLocation.longitude]);
 
   return (
     <View>
@@ -45,8 +55,25 @@ const GoogleMapView = () => {
         showsUserLocation={true}
         region={mapRegion}
       >
-        <Marker title="You are here" coordinate={mapRegion} />
-       
+        <Marker
+          title="You are here"
+          coordinate={mapRegion}
+          image={require('src/images/user-c.png')}
+        />
+        {newarByOnlineUsers.length > 0 &&
+          newarByOnlineUsers.map((user, ind) => ind < 2 && (
+              <Marker
+                title={user.name}
+                key={ind}
+                style={{opacity:.6}}
+                coordinate={{
+                  latitude: user.position.lat,
+                  longitude: user.position.long,
+                }}
+                image={require('src/images/location-sb.png')}
+              />
+            )
+          )}
       </MapView>
     </View>
   );

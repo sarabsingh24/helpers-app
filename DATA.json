@@ -2,16 +2,17 @@
     "users": [
         {
             "id": 1,
-            "name": "arvind kumar",
-            "state": "kanpur",
+            "name": "Arvind Kumar",
+            "state": "Kanpur",
             "gender": "male",
             "phone": "1111111111",
+            "type": "restaurant",
             "position": {
-                "latitude": 99,
-                "longitude": 99
+                "lat": 37.7868774,
+                "long": -122.4137499
             },
             "rating": 5,
-            "thumImage": "ddfdfdfdfd",
+            "thumImage": "https://cdn.openai.com/API/images/guides/image_generation_simple.webp",
             "intrest": [
                 "medical",
                 "lost items",
@@ -21,16 +22,17 @@
         },
         {
             "id": 2,
-            "name": "rakesh chadha",
-            "state": "delhi",
+            "name": "Rakesh Chadha",
+            "state": "Delhi",
             "gender": "male",
             "phone": "2222222222",
+            "type": "restaurant",
             "position": {
-                "latitude": 99,
-                "longitude": 99
+                "lat": 37.756819,
+                "long": -122.4233796
             },
             "rating": 5,
-            "thumImage": "ddfdfdfdfd",
+            "thumImage": "https://cdn.openai.com/API/images/guides/image_generation_simple.webp",
             "intrest": [
                 "money",
                 "guidence",
@@ -40,16 +42,17 @@
         },
         {
             "id": 3,
-            "name": "roshni mahajan",
-            "state": "delhi",
+            "name": "Roshni Mahajan",
+            "state": "Punjab",
             "gender": "female",
             "phone": "3333333333",
+            "type": "restaurant",
             "position": {
-                "latitude": 99,
-                "longitude": 99
+                "lat": 37.7574003,
+                "long": -122.3946605
             },
             "rating": 5,
-            "thumImage": "ddfdfdfdfd",
+            "thumImage": "https://cdn.openai.com/API/images/guides/image_generation_simple.webp",
             "intrest": [
                 "money",
                 "danger",
@@ -61,50 +64,50 @@
     "catagory": [
         {
             "id": 1,
-            "type": "money",
-            "thumImage": "dollar-sign",
+            "type": "Money",
+            "thumImage": "money",
             "page": "View"
         },
         {
             "id": 2,
-            "type": "medical",
-            "thumImage": "activity",
+            "type": "Medical",
+            "thumImage": "medical",
             "page": "View"
         },
         {
             "id": 3,
-            "type": "lost Item",
-            "thumImage": "camera",
+            "type": "Lost Item",
+            "thumImage": "lost",
             "page": "View"
         },
         {
             "id": 4,
-            "type": "danger",
-            "thumImage": "award",
+            "type": "Danger",
+            "thumImage": "danger",
             "page": "View"
         },
         {
             "id": 5,
-            "type": "guidence",
-            "thumImage": "at-sign",
+            "type": "Guidence",
+            "thumImage": "guidence",
             "page": "View"
         },
         {
             "id": 6,
-            "type": "accident",
-            "thumImage": "anchor",
+            "type": "Accident",
+            "thumImage": "accident",
             "page": "View"
         },
         {
             "id": 7,
-            "type": "mechanical",
-            "thumImage": "airplay",
+            "type": "Mechanical",
+            "thumImage": "mechanic",
             "page": "View"
         },
         {
             "id": 8,
-            "type": "talk",
-            "thumImage": "airplay",
+            "type": "Talk",
+            "thumImage": "talk",
             "page": "View"
         }
     ],

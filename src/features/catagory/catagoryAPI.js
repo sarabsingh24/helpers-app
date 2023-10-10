@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const BASE_URL = 'http://localhost:8082';
+import { BASE_URL } from 'src/utils/constant';
 
 //======Fetch all catagory ==================
 

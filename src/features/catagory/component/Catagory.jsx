@@ -15,6 +15,8 @@ import { fetchCatagoryAsync } from 'src/features/catagory/catagorySlice';
 //component
 import CatagoryItems from 'src/features/catagory/component/CatagoryItems';
 
+import UserList from 'src/features/users/component/UsersList';
+
 const Catagory = () => {
   const { catagory } = useSelector((state) => state.catagory);
 
@@ -31,6 +33,7 @@ const Catagory = () => {
         // horizontal={true}
         // showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.listContents}
+        numColumns={2}
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => navigation.navigate(item.page)}
@@ -40,6 +43,8 @@ const Catagory = () => {
           </TouchableOpacity>
         )}
       />
+
+      {/* <UserList /> */}
     </View>
   );
 };
@@ -48,10 +53,9 @@ export default Catagory;
 
 const styles = StyleSheet.create({
   listContents: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    gap: 2,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  box: {},
+  
 });

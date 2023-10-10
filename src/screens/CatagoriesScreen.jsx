@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import React from 'react'
 //component
 import Catagory from 'src/features/catagory/component/Catagory';
